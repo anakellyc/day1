@@ -122,6 +122,12 @@ var randomArray = randomText.split(/[\s,!;?]+/);
 console.log(randomArray);
 console.log(randomArray.length);
 
-var count = (randomText.match(/et/g) || []).length;
-console.log(count);
+var countText = 0;
 
+for (var i = 0; i<randomArray.length; i++) {
+    if (randomArray[i]=="et") {
+      countText ++;
+    }
+}
+console.log(i);
+console.log(countText);
