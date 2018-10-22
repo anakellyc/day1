@@ -136,7 +136,7 @@ let guest = prompt ("What's the guests's name?")
 console.log("The guest's name is " + guest);
 
 var guestString = guest.split(/[\s,!]+/).join("");
-console.log(guestString);
+
 
 var leftright = "";
 var rightleft = "";
@@ -144,12 +144,10 @@ var rightleft = "";
 for (var i = 0; i<guestString.length; i++) {
   var leftright = leftright + guestString[i].toLowerCase();
 }
-console.log(leftright);
 
 for (var i = guestString.length -1; i>=0; i--) {
   var rightleft = rightleft + guestString[i].toLowerCase();
 }
-console.log(rightleft);
 
 if (rightleft==leftright) {
   console.log("Palindrome detected!");
@@ -163,7 +161,6 @@ else {
 var randomText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec lorem nunc. Nam non venenatis orci. Donec dignissim fringilla neque. Donec lobortis, sapien ac efficitur molestie, ante felis vulputate est, non efficitur nibh felis non felis. Praesent sit amet lacus felis. Nulla dignissim facilisis ligula at efficitur. Maecenas ac tempus nunc. Vivamus varius convallis enim quis fringilla. Mauris porttitor, ipsum vitae rutrum rutrum, mi libero volutpat nulla, at fringilla tortor dui nec sapien. Cras egestas libero in cursus porttitor. Sed hendrerit iaculis magna, eget malesuada ante porta sed. Etiam sit amet purus hendrerit, hendrerit ipsum ac, tristique purus. Suspendisse vitae pellentesque tellus. Mauris id elit venenatis, venenatis libero sed, euismod nisl. Proin convallis tristique accumsan. Pellentesque volutpat dapibus neque, at porttitor est consectetur eu. Nam maximus, libero fringilla scelerisque ultricies, libero ligula fermentum elit, commodo commodo felis lacus in nisi. Sed sem felis, posuere sit amet eros eu, finibus pharetra risus. Donec malesuada dolor nisl, ac venenatis dui interdum ut. Donec sollicitudin, dui et condimentum molestie, lacus elit vestibulum mauris, in suscipit ante augue in est. Aliquam erat volutpat. Donec eget dolor quam. Cras hendrerit arcu at lacus pellentesque hendrerit at ac nunc. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. In iaculis efficitur purus, in accumsan nisi aliquam ut. Integer interdum felis ac pretium sagittis. Etiam fermentum in magna efficitur ullamcorper. Phasellus varius eget eros id feugiat. Ut tincidunt metus nec nibh dignissim, at viverra nulla varius. Suspendisse vestibulum gravida pharetra. Proin metus diam, rhoncus id justo sit amet, sagittis ullamcorper nulla. Aliquam erat volutpat."
 
 var randomArray = randomText.split(/[\s,!;?]+/);
-console.log(randomArray);
 console.log(randomArray.length);
 
 var countText = 0;
@@ -173,7 +170,6 @@ for (var i = 0; i<randomArray.length; i++) {
       countText ++;
     }
 }
-
 
 console.log(countText);
 
