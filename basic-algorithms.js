@@ -129,5 +129,5 @@ for (var i = 0; i<randomArray.length; i++) {
       countText ++;
     }
 }
-console.log(i);
+
 console.log(countText);
