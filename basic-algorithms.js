@@ -34,7 +34,7 @@ for (var j = hacker2.length -1; j>=0; j--) {
 var navigatorString = navigatorArray.join('');
 console.log(navigatorString);
 
-
+/*
 function alphabetize (hacker1, hacker2) {
   if (hacker1.toLowerCase() == hacker2.toLowerCase()) {
     console.log("What?! You both got the same name?");
@@ -73,9 +73,53 @@ function alphabetize (hacker1, hacker2) {
 }
 
 alphabetize(hacker1, hacker2);
+*/
 
+function alphabetize (hacker1, hacker2) {
+  if (hacker1.toLowerCase() == hacker2.toLowerCase()) {
+    console.log("What?! You both got the same name?");
+    return true;
+  }
+  if (hacker1.length<hacker2.length) {
+  for (var i = 0; i < hacker1.length; i++) {
+      if (hacker1[i].toLowerCase()<hacker2[i].toLowerCase()) {
+        console.log("The driver's name goes first");
+        break;
+      }
+      else if (hacker1[i].toLowerCase()>hacker2[i].toLowerCase()) {
+        console.log("Yo, the navigator goes first definitely");
+        break;
+      }
+    }
+  }
+  else {
+    for (var i = 0; i < hacker2.length; i++) {
+      if (hacker1[i].toLowerCase()<hacker2[i].toLowerCase()) {
+        console.log("The driver's name goes first");
+        break;
+      }
+      else if (hacker1[i].toLowerCase()>hacker2[i].toLowerCase()) {
+        console.log("Yo, the navigator goes first definitely");
+        break;
+      }
+    }
+  }
+  if (hacker2.toLowerCase().includes(hacker1.toLowerCase(),0)) {
+    console.log("The driver's name goes first");
+    return true;
+  } 
+  else if (hacker1.toLowerCase().includes(hacker2.toLowerCase(),0)) {
+    console.log("Yo, the navigator goes first definitely");
+    return true;
+  }
+}
 
-/* 8 extra, alphabetize using sort
+alphabetize(hacker1, hacker2);
+
+/* 8 extra, alphabetize using sort:
+hacker1 = hacker1.toLowerCase();
+hacker2 = hacker2.toLowerCase();
+namesArray = [hacker1,hacker2];
 namesArray.sort();
 if (hacker1==hacker2) {
   console.log("What?! You both got the same name?");
@@ -85,7 +129,7 @@ else if (namesArray[0]==hacker1) {
 }
 else {
   console.log("Yo, the navigator goes first definitely");
-}*/
+} */
 
 
 let guest = prompt ("What's the guests's name?") 
@@ -98,12 +142,12 @@ var leftright = "";
 var rightleft = "";
 
 for (var i = 0; i<guestString.length; i++) {
-  var leftright = leftright + guestString[i];
+  var leftright = leftright + guestString[i].toLowerCase();
 }
 console.log(leftright);
 
 for (var i = guestString.length -1; i>=0; i--) {
-  var rightleft = rightleft + guestString[i];
+  var rightleft = rightleft + guestString[i].toLowerCase();
 }
 console.log(rightleft);
 
@@ -130,4 +174,10 @@ for (var i = 0; i<randomArray.length; i++) {
     }
 }
 
+
 console.log(countText);
+
+/* another way to count, with RegEx:
+var counterWord = (randomText.match(/\bet\b/g) || []).length;
+console.log(counterWord);
+*/
